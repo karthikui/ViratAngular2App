@@ -1,0 +1,11 @@
+nav  ul li a{
+    font-size: 20px;
+    margin-right:20px;
+}
+.navbar-brand{
+    font-size:35px;
+}
+.navbar-nav > li{
+    margin-left:30px;
+    margin-right:30px;
+}
