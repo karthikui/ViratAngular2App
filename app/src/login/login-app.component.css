@@ -5,7 +5,14 @@ nav  ul li a{
 .navbar-brand{
     font-size:35px;
 }
-.navbar-nav > li{
-    margin-left:30px;
-    margin-right:30px;
+.navbar-default {
+     background-color: inherit;
+}
+
+.container-fluid {
+    pading-top:5px;
+}
+
+.nav li a  hover{
+    bakground-color:inherit;
 }

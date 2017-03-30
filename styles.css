@@ -1,6 +1,5 @@
 /* app css stylesheet */
 .hoverwell:hover {
-  background-color: #485563;
   cursor: pointer;
 }
 
@@ -32,4 +31,12 @@ button {
 }
 .toast-warning {
   background-color: #f89406;
+}
+
+body {
+  background-color: #6eb4ad;
+}
+
+.page h1.format-icon:before {
+  content: none;
 }
