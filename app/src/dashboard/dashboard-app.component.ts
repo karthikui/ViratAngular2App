@@ -1,33 +1,24 @@
-import { Component, Input }  from '@angular/core'
-
+import { Component }  from '@angular/core'
+import {DashboardService} from '../shared/services/dashboard.service'
 
 @Component({
-    selector : 'dashboard',
-    template: `
-<div class = "well hoverwell thumbnail">
-    <h2>{{event.name}}</h2>
-        <div>
-            Date:{{event.date}}
-        </div>
-        <div>
-            Time:{{event.time}}
-        </div>
-    <div *ngIf = "event?.location">
-        <span>Location:{{event.location.address}}</span>
-        <span>nbsp;</span>
-        <span>{{event.location.city}}, {{event.location.country}}</span>
+    selector: 'dashboard-app',
+    template : `
+<div class="row">
+    <div *ngFor="let event of events" class="col-md-5">
+        <dashboard-detail [event] = "event"> </dashboard-detail>
     </div>
-    <div *ngIf="event?.imageUrl">
-    Image URL: {{event?.imageUrl}}
 </div>
-</div>
-`,
-    styles:[`
-              .well {
-              background-color:inherit
-              }
-           `]
+              `,
 })
-export class DashboardApp {
-    @Input() event:any
+
+export class DashboardAppComponent {
+    events:any
+
+    constructor(private dashboardService: DashboardService){
+
+    }
+    ngOnInit() {
+        this.events = this.dashboardService.getEvents()
+    }
 }

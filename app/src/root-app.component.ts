@@ -4,8 +4,8 @@ import { Component }  from '@angular/core'
 @Component({
        selector:'root-app',
        template:`
-         <auth-app> </auth-app>
-         <login-app></login-app>
+            <auth-app></auth-app>
+            <router-outlet></router-outlet>
 `
 })
 

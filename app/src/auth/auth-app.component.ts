@@ -1,5 +1,4 @@
 import { Component }  from '@angular/core'
-import {DashboardService} from '../shared/services/dashboard.service'
 
 @Component({
     selector: 'auth-app',
@@ -17,22 +16,10 @@ import {DashboardService} from '../shared/services/dashboard.service'
         </div>
     </div>
 </nav>
-<div class="row">
-    <div *ngFor="let event of events" class="col-md-5">
-        <dashboard [event] = "event"> </dashboard>
-    </div>
-</div>
               `,
     styleUrls:['app/src/auth/auth-app.component.css']
 })
 
 export class AuthAppComponent {
-    events:any
 
-    constructor(private dashboardService: DashboardService){
-
-    }
-    ngOnInit() {
-        this.events = this.dashboardService.getEvents()
-}
 }
