@@ -1,12 +1,13 @@
 nav  ul li a{
     font-size: 20px;
     margin-right:20px;
+    text-decoration: none;
 }
 .navbar-brand{
     font-size:35px;
 }
 .navbar-default {
-     background-color: inherit;
+    background-color: inherit;
 }
 
 .container-fluid {
@@ -16,3 +17,4 @@ nav  ul li a{
 .nav li a  hover{
     bakground-color:inherit;
 }
+
